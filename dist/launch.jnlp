@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>MandelbrotFractal2</title>
+        <vendor>Jesse</vendor>
+        <homepage href=""/>
+        <description>MandelbrotFractal2</description>
+        <description kind="short">MandelbrotFractal2</description>
+        
+        
+    </information>
+    <update check="always"/>
+    
+    <resources>
+        <j2se version="1.7+"/>
+        <jar href="MandelbrotFractal2.jar" main="true"/>
+        
+        
+    </resources>
+    <application-desc main-class="mandelbrotfractal2.Main">
+        
+    </application-desc>
+</jnlp>
