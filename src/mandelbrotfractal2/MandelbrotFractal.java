@@ -27,6 +27,11 @@ public class MandelbrotFractal extends PointBasedFractal
 	}
 	
 	
+	// https://en.wikipedia.org/wiki/Mandelbrot_set#Cardioid_.2F_bulb_checking
+	// Checks if the point is within the second period
+	public boolean secondPeriodTest(double x, double y) {
+		return Math.pow(x + 1, 2) + Math.pow(y, 2) < 1/16;
+	}
 	
 	/**
 	 * Computes the color at the specified point the fractal and returns the result.
@@ -45,6 +50,9 @@ public class MandelbrotFractal extends PointBasedFractal
 		double q = Math.pow(xOff, 2) + ptYSq;
 		if (q * (q + xOff) < ptYSq / 4)
 			return Color.BLACK; //http://en.wikipedia.org/wiki/Mandelbrot_fractal#Optimizations
+		
+		if (secondPeriodTest(xOff, ptYSq)) 
+			return Color.BLACK;
 		
 		double x = 0, xSq = 0, y = 0, ySq = 0;
 		int iterations;
