@@ -35,7 +35,7 @@ public class Main extends JFrame implements KeyListener
 	{
 		super("Mandelbrot Fractal 2.1");
 	
-		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[1];
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0];
 		DisplayMode displayMode = gd.getDisplayMode();
 		
 		screenSize = new Dimension(new Dimension(displayMode.getWidth(), displayMode.getHeight()));
